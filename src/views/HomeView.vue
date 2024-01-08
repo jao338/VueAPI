@@ -1,9 +1,15 @@
 <template>
 
-  <div class="card" v-for="user in users" :key="user.id">
-    <div class="card-body">
-      <routerLink :to="{name: 'user-todo', params: {id:user.id}}">{{ user.name }}</routerLink>
+  <div class="mt-3">
+
+    <h4 class="mb-3">Lista de usuários</h4>
+    
+    <div class="card mb-2" v-for="user in users" :key="user.id">
+      <div class="card-body">
+        <routerLink class="text-decoration-none" :to="{name: 'user-todo', params: {id:user.id}}">{{ user.name }}</routerLink>
+      </div>
     </div>
+
   </div>
 
 </template>
